@@ -31,7 +31,7 @@ function App() {
         <Route path="/share" element={user ? <ShareNote /> : <Login onLogin={() => setUser(auth.currentUser)} />} />
         <Route path="/view/:id" element={<ViewNote />} />
         <Route path="/view" element={<ViewNote />} />
-        <Route path="/" element={<Navigate to={user ? "/notes" : "/"} />} />
+        <Route path="/" element={user ? <Navigate to="/notes" /> : <Login onLogin={() => setUser(auth.currentUser)} />} />
       </Routes>
     </Router>
   );
