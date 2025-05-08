@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { auth } from './firebase-config';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
+
 
 import './App.css';
 import Login from './Login';
